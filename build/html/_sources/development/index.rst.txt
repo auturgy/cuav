@@ -7,7 +7,7 @@ The cuav source code is available from https://github.com/CanberraUAV/cuav
 Windows
 =======
 
-You will need to have `Python
+You need to have `Python
 2.7 <http://www.python.org/download/releases/2.7/>`_
 and `wxPython <http://www.wxpython.org/download.php>`_ installed first.
 
@@ -31,9 +31,9 @@ This needs to happen after any changes to the source code. See the
 to build and run the cuav tools.
 
 To create a one-click windows installer for cuav, run ``cuavWinBuild.bat``, 
-which is in the ``./windows`` directory. The installer will be created in the 
+which is in the ``./windows`` directory. The installer is created in the 
 ``./windows/output`` directory. The `Inno Setup <http://www.jrsoftware.org/isdl.php#stable>`_ 
-program will be required for this process and is assumed to be installed in the 
+program is required for this process and is assumed to be installed in the 
 ``C:\Program Files (x86)\Inno Setup 5\`` folder
 
 Linux
@@ -42,8 +42,7 @@ Linux
 Follow the user installation instructions as per the
 topic :doc:`../installing/index` (minus the ``pip install cuav`` step).
 
-After making the desired changes, cuav is required to be installed. This 
-needs to happen after any changes to the source code. This can be done by:
+After making the desired changes, cuav is required to be installed. This needs to happen after any changes to the source code. This can be done by:
 
 .. code:: bash
 

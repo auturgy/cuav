@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,29 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CanberraUAV Image Processing Tools (cuav) 1.4.0 documentation" href="../index.html"/>
-        <link rel="up" title="Getting Started" href="index.html"/>
-        <link rel="next" title="Development" href="../development/index.html"/>
-        <link rel="prev" title="Geotagger (geotag.py)" href="geotag.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Development" href="../development/index.html" />
+    <link rel="prev" title="Geotagger (geotag.py)" href="geotag.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +79,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installing/index.html">Installing</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="pgm_conv.html">PGM Converter (pgm_convert.py)</a></li>
@@ -110,36 +107,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">CanberraUAV Image Processing Tools (cuav)</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CanberraUAV Image Processing Tools (cuav)</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Getting Started</a> &raquo;</li>
-      
-    <li>Geosearch (geosearch.py)</li>
+        
+      <li>Geosearch (geosearch.py)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/getting_started/geosearch.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -149,18 +166,10 @@
 <h1>Geosearch (geosearch.py)<a class="headerlink" href="#geosearch-geosearch-py" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="starting">
 <h2>Starting<a class="headerlink" href="#starting" title="Permalink to this headline">¶</a></h2>
-<p>This program searches a set of photos taken by a UAV and looks for any interesting
-or unusual objects (such as stranded people). Any candidate objects are georeferenced on a
-map and shown to the user.</p>
-<p>The overall objective is to quickly and easily find the location of a missing person, based on
-a set of photos taken overhead by a UAS.</p>
-<p>The algorithm used in geosearch is very conservative and will err on the side of cuation when deciding
-if an object is &quot;interesting&quot; enough to flag to the user. Thus it is expected that many false positives will
-be detected, at which point it will be up to the user to figure out if an image contains the desired person or
-object.</p>
-<p>The algorithm is tuned for finding person-sized and shaped objects that contrast well against the background. So a
-person laying down and wearing high-visibility clothing will be easily found. It has been (somewhat humourously) noted
-that sheep to fit in this category too.</p>
+<p>This program searches a set of photos taken by a UAV and looks for any interesting or unusual objects (such as stranded people). Any candidate objects are georeferenced on a map and shown to the user.</p>
+<p>The overall objective is to quickly and easily find the location of a missing person, based on a set of photos taken overhead by a UAS.</p>
+<p>The algorithm used in geosearch is very conservative and errors on the side of caution when deciding if an object is &quot;interesting&quot; enough to flag to the user. Thus it is expected that many false positives are detected, at which point it is up to the user to figure out if an image contains the desired person or object.</p>
+<p>The algorithm is tuned for finding person-sized and shaped objects that contrast well against the background. So a person laying down and wearing high-visibility clothing is easily found. It has been (somewhat humorously) noted that sheep to fit in this category too.</p>
 <p>There are two ways of running geosearch:</p>
 <ol class="arabic simple">
 <li>With timestamped images and a flight log (use <code class="docutils literal"><span class="pre">--mavlog</span></code> to specify log)</li>
@@ -284,8 +293,8 @@ Exif.GPSInfo.GPS.Latitude, Exif.GPSInfo.GPS.Longitude</p>
 </tr>
 </tbody>
 </table>
-<p>If no arguments are supplied, a GUI will appear asking for startup options.</p>
-<p>Otherwise, it can be started directly from the commandline. For example, In Linux:</p>
+<p>If no arguments are supplied, a GUI appears asking for startup options.</p>
+<p>Otherwise, it can be started directly from the command line. For example, In Linux:</p>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">geosearch</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">folder</span><span class="o">&gt;</span>
 <span class="n">geosearch</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">mavlog</span><span class="o">=</span><span class="n">flight</span><span class="o">.</span><span class="n">tlog</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">tosearch</span>
 </pre></div>
@@ -293,38 +302,34 @@ Exif.GPSInfo.GPS.Latitude, Exif.GPSInfo.GPS.Longitude</p>
 </div>
 <div class="section" id="running">
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
-<p>After starting Geosearch, 2 windows (by default) will appear - a &quot;Mosaic&quot; window that shows a cropped image of
-any detected interesting images and the &quot;Map&quot; window which shows the location of the cropped image (plus UAV, if
+<p>After starting Geosearch, 2 windows (by default) appear - a &quot;Mosaic&quot; window that shows a cropped image of any detected interesting images and the &quot;Map&quot; window which shows the location of the cropped image (plus UAV, if
 using a tlog).</p>
 <p>To start the processing, go to <code class="docutils literal"><span class="pre">GEOSearch</span> <span class="pre">-&gt;</span> <span class="pre">Start</span></code> in the menu of the Mosiac window (see below image, start
 button in red).</p>
 <img alt="../_images/geosearch0.png" src="../_images/geosearch0.png" />
-<p>Once started, the GEOsearch will run through the images (and tlog, if used) at a faster-than-realtime rate. As
-interesting objects are found in the images, a cropped image of the detected object will be display in the mosaic.</p>
-<p>If many images are found, use the <code class="docutils literal"><span class="pre">View</span> <span class="pre">-&gt;</span> <span class="pre">Next</span> <span class="pre">Page</span></code> menu to scroll to the next page of the mosiac (in red, below).</p>
+<p>Once started, the GEOsearch runs through the images (and tlog, if used) at a faster-than-real-time rate. As interesting objects are found in the images, a cropped image of the detected object is displayed in the mosaic.</p>
+<p>If many images are found, use the <code class="docutils literal"><span class="pre">View</span> <span class="pre">-&gt;</span> <span class="pre">Next</span> <span class="pre">Page</span></code> menu to scroll to the next page of the mosaic (in red, below).</p>
 <p>The objects in the mosaic will all be geolocated onto the map (in blue, below).</p>
 <img alt="../_images/geosearch1.png" src="../_images/geosearch1.png" />
-<p>Left clicking on an image in the mosiac will open an information box in the map window (in red, below). This shows
-a high-contrast version of the detected object, plus it's location and image file that it appeared in.</p>
+<p>Left clicking on an image in the mosaic opens an information box in the map window (in red, below). This shows a high-contrast version of the detected object, plus its location and image file that it appeared in.</p>
 <img alt="../_images/geosearch2.png" src="../_images/geosearch2.png" />
-<p>Right-clicking on an image in the mosaic will give a menu. Use <code class="docutils literal"><span class="pre">Show</span> <span class="pre">Image</span></code> to open a seperate window showing the
-entire image with blue boxes around the detected object(s) (see below). This is useful for showing the wider area around the
-detected object, giving better context.</p>
+<p>Right-clicking on an image in the mosaic gives a menu. Use <code class="docutils literal"><span class="pre">Show</span> <span class="pre">Image</span></code> to open a separate window showing the entire image with blue boxes around the detected object(s) (see below). This is useful for showing the broader area around the detected object, giving better context.</p>
 <img alt="../_images/geosearch3.png" src="../_images/geosearch3.png" />
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../development/index.html" class="btn btn-neutral float-right" title="Development" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../development/index.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="geotag.html" class="btn btn-neutral" title="Geotagger (geotag.py)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="geotag.html" class="btn btn-neutral" title="Geotagger (geotag.py)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -337,7 +342,7 @@ detected object, giving better context.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -356,9 +361,11 @@ detected object, giving better context.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.4.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -367,19 +374,13 @@ detected object, giving better context.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

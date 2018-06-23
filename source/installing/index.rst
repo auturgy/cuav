@@ -1,14 +1,16 @@
 ==========
 Installing
 ==========
+Cuav runs on the Python 2.7.x environment. Ensure your system is running the correct version of Python.
+
 
 Windows
 =======
 
-For Windows users, the cuav software installer can be found at http://canberrauav.org.au/download/cuav/. The installer
-will create links to the software on the start menu.
+For Windows users, the cuav software installer is found at http://canberrauav.org.au/download/cuav/. The installer
+creates links to the software on the start menu.
 
-The changelog (detailing the fixes and enhancements for each version) can be found at http://canberrauav.org.au/download/cuav_changelog/
+The changelog (detailing the fixes and enhancements for each version) is found at http://canberrauav.org.au/download/cuav_changelog/
 
 Linux
 ======
@@ -39,11 +41,6 @@ For Fedora based systems:
 
     On some older Linux systems, ``python-wxgtk3.0`` may be instead named
     as ``python-wxgtk2.8``.
-
-.. note::
-
-    Cuav runs on the Python 2.7.x environment. Ensure your system is running
-    the correct version of Python.
 
 .. toctree::
     :maxdepth: 1

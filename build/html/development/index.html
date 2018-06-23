@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,28 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CanberraUAV Image Processing Tools (cuav) 1.4.0 documentation" href="../index.html"/>
-        <link rel="next" title="Image Sources" href="../cuavimagesource.html"/>
-        <link rel="prev" title="Geosearch (geosearch.py)" href="../getting_started/geosearch.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using the CanberraUAV Imagery Set" href="../cuavimagesource.html" />
+    <link rel="prev" title="Geosearch (geosearch.py)" href="../getting_started/geosearch.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +79,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installing/index.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Development</a><ul>
@@ -94,7 +92,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cuavimagesource.html">Image Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cuavimagesource.html">Using the CanberraUAV Imagery Set</a></li>
 </ul>
 
             
@@ -106,34 +104,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">CanberraUAV Image Processing Tools (cuav)</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CanberraUAV Image Processing Tools (cuav)</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Development</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Development</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/development/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -144,7 +162,7 @@
 <p>The cuav source code is available from <a class="reference external" href="https://github.com/CanberraUAV/cuav">https://github.com/CanberraUAV/cuav</a></p>
 <div class="section" id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<p>You will need to have <a class="reference external" href="http://www.python.org/download/releases/2.7/">Python
+<p>You need to have <a class="reference external" href="http://www.python.org/download/releases/2.7/">Python
 2.7</a>
 and <a class="reference external" href="http://www.wxpython.org/download.php">wxPython</a> installed first.</p>
 <p>Next, open up a console in the Python scripts install path
@@ -166,17 +184,16 @@ This needs to happen after any changes to the source code. See the
 <code class="file docutils literal"><span class="pre">./windows/geotagbuildrun.bat</span></code> scripts for information on how
 to build and run the cuav tools.</p>
 <p>To create a one-click windows installer for cuav, run <code class="docutils literal"><span class="pre">cuavWinBuild.bat</span></code>,
-which is in the <code class="docutils literal"><span class="pre">./windows</span></code> directory. The installer will be created in the
+which is in the <code class="docutils literal"><span class="pre">./windows</span></code> directory. The installer is created in the
 <code class="docutils literal"><span class="pre">./windows/output</span></code> directory. The <a class="reference external" href="http://www.jrsoftware.org/isdl.php#stable">Inno Setup</a>
-program will be required for this process and is assumed to be installed in the
+program is required for this process and is assumed to be installed in the
 <code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\Inno</span> <span class="pre">Setup</span> <span class="pre">5\</span></code> folder</p>
 </div>
 <div class="section" id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <p>Follow the user installation instructions as per the
 topic <a class="reference internal" href="../installing/index.html"><span class="doc">Installing</span></a> (minus the <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cuav</span></code> step).</p>
-<p>After making the desired changes, cuav is required to be installed. This
-needs to happen after any changes to the source code. This can be done by:</p>
+<p>After making the desired changes, cuav is required to be installed. This needs to happen after any changes to the source code. This can be done by:</p>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span>
 </pre></div>
 </div>
@@ -187,15 +204,16 @@ needs to happen after any changes to the source code. This can be done by:</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cuavimagesource.html" class="btn btn-neutral float-right" title="Image Sources" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../cuavimagesource.html" class="btn btn-neutral float-right" title="Using the CanberraUAV Imagery Set" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../getting_started/geosearch.html" class="btn btn-neutral" title="Geosearch (geosearch.py)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../getting_started/geosearch.html" class="btn btn-neutral" title="Geosearch (geosearch.py)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -208,7 +226,7 @@ needs to happen after any changes to the source code. This can be done by:</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -227,9 +245,11 @@ needs to happen after any changes to the source code. This can be done by:</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1.4.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -238,19 +258,13 @@ needs to happen after any changes to the source code. This can be done by:</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
